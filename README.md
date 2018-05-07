@@ -4,7 +4,7 @@ A blog article discussing my experience and decisions in building **EmeraldFX** 
 Built and tested on Linux Mint, SUSE Linux, Microsoft Windows.
 
 ![alt text](https://raw.githubusercontent.com/afinlay5/EmeraldFX/master/Emerald.png)
-![alt text](https://raw.githubusercontent.com/afinlay5/EmeraldFX/master/blog.png)
+<!-- ![alt text](https://raw.githubusercontent.com/afinlay5/EmeraldFX/master/blog.png) -->
 
 # Platform 
 - Any platform that supports JavaFX10 (Java 10.0.0).
