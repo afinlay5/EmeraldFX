@@ -1,32 +1,34 @@
 #! /usr/bin/env jython
-
 """
-Copyright (C) 2018 Adrian D. Finlay. All rights reserved.
+=================================================================================
+LICENSE: GNU GPL V2 (https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-Licensed under the MIT License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+EmeraldFX, a web Browser written with JavaFX written in Jython, Java, & Python.
+Copyright (C) <2018>  ADRIAN D. FINLAY.
 
-    https://opensource.org/licenses/MIT
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER INCLUDING AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-==============================================================================
+Adrian D. Finlay, hereby disclaims all copyright interest in the program
+`EmeraldFX' (which makes passes at compilers) written by Oracle Corporation, 
+The Jython Development Tean.
+
+Adrian D. Finlay, May 7, 2018
+Adrian D. Finlay, Founder
+www.adriandavid.me
+Contact: adf5152@live.com
+=================================================================================
 """
 
 #Application Packages - Jython, Python
@@ -109,8 +111,14 @@ class EmeraldFX (Application):
 		print ("----------------------------------------------------")
 		print ("Log: This is the first lifecycle method -- init().")
 		print ("----------------------------------------------------")
-		print ("Hello, init().")
+		print ("Hello, init().\n")
 		
+		#GPLv2License
+		print("EmeraldFX v.1.0, Copyright (C) 2018 Adrian D. Finlay.")
+		print("EmeraldFX comes with ABSOLUTELY NO WARRANTY; for details type.")
+		print("This is free software, and you are welcome to redistribute it")
+		print("under certain conditions. For all related details, see ~/license.\n")
+
 		try:	
 			self.__ERROR_404  = File("../resources/html/ERROR_404.html").toURI().toString()
 			self.__NO_CONNECTION_PAGE  = File("../resources/html/NO_CONNECTION.html").toURI().toString()
@@ -142,7 +150,7 @@ class EmeraldFX (Application):
 			self.__CURRENT_TITLE = self.getTitleByURL(self.__CURRENT_URL)
 			self.__CONNECTION_FLAG = bool()
 			self.__LICENSE_ACCEPTANCE = str()
-		
+			
 			try:
 				self.__HISTORY_ENABLED = literal_eval(self.__config['optionals']['HISTORY_ENABLED'])
 				self.__SPLASH_SCREEN_ENABLED = 	literal_eval(self.__config['optionals']['SPLASH_SCREEN_ENABLED'])
@@ -190,6 +198,7 @@ class EmeraldFX (Application):
 			self.__CURRENT_TRACK = self.__MP_IT.next()
 		else:
 			self.__MUSIC_AUTO_PLAY = False
+			self.__CURRENT_TRACK = None
 
 		# self.__APPLICATION_CLIPBOARD = Clipboard.getSystemClipboard()
 
@@ -215,7 +224,7 @@ class EmeraldFX (Application):
 		from javafx.scene.control import SeparatorMenuItem #javafx.scene.control.SeparatorMenuItem
 		from javafx.scene.control import ContextMenu #javafx.scene.control.ContextMenu
 		from javafx.scene.control import ListCell #javafx.scene.control.ListCell
-			
+		
 
 		#Load/Skip Splash Screen
 		if self.__SPLASH_SCREEN_ENABLED is True:
@@ -223,7 +232,7 @@ class EmeraldFX (Application):
 			ss.render()
 
 		###  Configure Main Stage ####
-	
+		
 		#Add main to Collection of Stages
 		self.addStageToList(main)
 		
