@@ -1,0 +1,8 @@
+/*Adapted from - https://stackoverflow.com/a/19724408*/
+.tooltip {
+-fx-background-color: "D9D6CC";
+-fx-background-insets: 0,1,2;
+-fx-background-radius: 0 0 13 0;
+-fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 0 );
+}

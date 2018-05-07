@@ -1,0 +1,5 @@
+cursor: text;
+
+.cursor{
+	-fx-cursor: url("../icons/text-cursor.png", text);
+}

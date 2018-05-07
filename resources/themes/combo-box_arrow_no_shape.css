@@ -1,0 +1,13 @@
+/*ComboBox's Arrow is a Region.*/
+.combo-box .arrow-button .arrow {
+	/*Settign either of these two will do.*/
+	 -fx-background-color: transparent; 
+	 -fx-opacity: 0.0;	
+}
+
+/*ComboBox's Arrow Button is a Stack Pane.*/
+.combo-box .arrow-button{
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+    -fx-background-image: url("../icons/previous_url_bar.png");
+}

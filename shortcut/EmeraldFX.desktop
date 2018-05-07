@@ -1,0 +1,18 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Emerald FX
+GenericName=Web Browser
+Comment=A Simple Web Browser, written in JythonFX
+Exec=jython /home/adrian/Projects/EmeraldFX/source/EmeraldFX.py
+Terminal=true
+MimeType=text/plain;
+Icon=/home/adrian/Projects/EmeraldFX/resources/icons/EmeraldFX-48x36.jpg
+Categories=Categories=Network;WebBrowser;
+StartupNotify=true
+Actions=Window
+
+[Desktop Action Window]
+Name=New Session
+Exec=/home/adrian/Projects/EmeraldFX/source/ jython EmeraldFX.py
+OnlyShowIn=Unity;

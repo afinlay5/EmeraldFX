@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="1350.0" spacing="5.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.controller.HistoryWindowFXMLController">
+   <children>
+      <Button fx:id="home" alignment="CENTER" disable="true" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ComboBox fx:id="url" disable="true" editable="true" prefHeight="25.0" prefWidth="640.0" styleClass="combo-box" stylesheets="@../themes/combo-box_arrow_shape.css" />
+      <Button fx:id="enter" disable="true" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/enter.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="cancel" disable="true" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="refresh" disable="true" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/refresh.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backward" disable="true" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/backward.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="forward" alignment="CENTER" disable="true" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/forward.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="history" disable="true" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/history.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ProgressBar fx:id="progress" prefWidth="210.0" progress="1.0">
+         <padding>
+            <Insets top="4.0" />
+         </padding>
+      </ProgressBar>
+      <Button id="play" fx:id="play" mnemonicParsing="false" onAction="#handlePlay">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/play.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="stop" fx:id="stop" mnemonicParsing="false" onAction="#handleStop">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/stop.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="previous" fx:id="previous" mnemonicParsing="false" onAction="#handlePrevious">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/previous.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button id="next" fx:id="next" mnemonicParsing="false" onAction="#handleNext">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/next.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <MenuButton fx:id="menu" mnemonicParsing="false">
+         <items>
+            <CheckMenuItem fx:id="toggleTheme" mnemonicParsing="false" onAction="#toggleTheme" selected="true" text="Dark Theme       (Ctrl + T)">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/theme.png" />
+                     </image>
+                  </ImageView>
+               </graphic></CheckMenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="clearHistory" mnemonicParsing="false" onAction="#clearHistory" text="Clear History      (Ctrl + D)">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic></MenuItem>
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem fx:id="quit" mnemonicParsing="false" onAction="#quit" text="Quit                    (Ctrl + Q)">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/quit.png" />
+                     </image>
+                  </ImageView>
+               </graphic></MenuItem>
+         </items>
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/HBGR_MENU_ICON.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </MenuButton>
+   </children>
+</HBox>
