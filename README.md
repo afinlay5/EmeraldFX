@@ -3,7 +3,8 @@ Gradle source/build repository for EmeraldFX-- web browser written with JavaFX i
 A blog article discussing my experience and decisions in building **EmeraldFX** is available here (http://bit.ly/--------).
 Built and tested on Linux Mint, SUSE Linux, Microsoft Windows.
 
-![alt text](https://raw.githubusercontent.com/afinlay5/EmeraldFX/master/Emerald.png)
+<p align="center"> <img width="633" height="221" src="https://raw.githubusercontent.com/afinlay5/EmeraldFX/master/Emerald.png"> </p>
+<!-- ![alt text](https://raw.githubusercontent.com/afinlay5/EmeraldFX/master/Emerald.png) -->
 <!-- ![alt text](https://raw.githubusercontent.com/afinlay5/EmeraldFX/master/blog.png) -->
 
 # Platform 
