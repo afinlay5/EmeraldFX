@@ -1998,3 +1998,4 @@ if __name__ == "__main__":
 #Close Stage(Window) - Ctrl + W
 #Add support for downloading, starting with "save link as".
 #Add shebang to all jython files #! /usr/bin/env jython
+#https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TextInputControl.html#cut--

@@ -58,7 +58,8 @@ class SplashScreen():
 		self.progress_splash = ProgressBar()
 
 		#Splash Fade
-		self.splash_fade = FadeTransition(Duration.seconds(4))
+		self.splash_fade = FadeTransition(Duration.seconds(2))
+		self.splash_fade2 = FadeTransition(Duration.seconds(2))
 	
 	def render(self):		
 		
@@ -120,8 +121,11 @@ class SplashScreen():
 		
 		#Fade Transition Configuration
 		self.splash_fade.setNode(SPLASH_ROOTP)
-		self.splash_fade.setFromValue(1.0)
-		self.splash_fade.setToValue(0.2)	
+		self.splash_fade2.setNode(SPLASH_ROOTP)
+		self.splash_fade.setFromValue(0)
+		self.splash_fade.setToValue(1.0)	
+		self.splash_fade2.setFromValue(1.0)
+		self.splash_fade2.setToValue(0)	
 
 		#As soon as the stage pops up, play
 		# splash.setOnShown(self.__CURRENT_TRACK.play() if self.__MUSIC_AUTO_PLAY else None)
@@ -132,3 +136,6 @@ class SplashScreen():
 	def getSplashFade(self):
 		'''Splash Fade'''
 		return self.splash_fade
+	def getSplashFade2(self):
+		'''Splash Fade'''
+		return self.splash_fade2
